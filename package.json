@@ -1,12 +1,12 @@
 {
   "name": "orbitstream-backend",
   "version": "1.0.0",
-  "description": "OrbitStream backend API — real-time token streaming on Stellar/Soroban",
+  "description": "OrbitStream backend API \u2014 real-time token streaming on Stellar/Soroban",
   "private": true,
   "scripts": {
-    "build": "tsc -p tsconfig.json",
-    "start": "node dist/main.js",
-    "dev": "ts-node src/main.ts",
+    "build": "node init && tsc -p tsconfig.json",
+    "start": "node init && node dist/main.js",
+    "dev": "node init && ts-node src/main.ts",
     "test": "jest",
     "test:unit": "jest --testPathPattern='(?<!integration)\\.spec\\.ts$' --passWithNoTests",
     "test:integration": "jest --testPathPattern='integration\\.spec\\.ts$' --passWithNoTests",
